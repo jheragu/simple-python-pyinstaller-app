@@ -1,10 +1,11 @@
 pipeline {
-    agent {label "jenkins-agent-00001pvz9n2ko"} 
+    //agent {label "jenkins-agent-00001pvz9n2ko"}
+    agent none
     stages {
         stage('Build') { 
             agent {
                 docker {
-                    image 'python:2.7.18-buster' 
+                    image 'python:3.9.12-bullseye' 
                 }
             }
             steps {
