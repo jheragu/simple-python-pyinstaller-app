@@ -1,6 +1,10 @@
 pipeline {
-    agent {label "jenkins-agent"}
-    //agent any
+    //agent {label "jenkins-agent"}
+    agent any
+
+    environment {
+        DOCKERHUB_CREDENTIALS=credentials('docker_hub')
+    }
     stages {
         stage('Build') { 
             agent {
