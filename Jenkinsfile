@@ -1,6 +1,6 @@
 pipeline {
-    //agent {label "jenkins-agent-00001pvz9n2ko"}
-    agent any
+    agent {label "jenkins-agent-00001pvz9n2ko"}
+    //agent any
     stages {
         stage('Build') { 
             agent {
